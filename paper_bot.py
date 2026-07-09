@@ -139,7 +139,7 @@ class WindowState:
             return 0.0
         return min(1.0, self.fill_notional / self.stake)
 
-    def try_arm(self, n_armed_same_window):
+    def try_arm(self, other_states):
         if self.done_arming or self.book.halted:
             self.done_arming = self.done_arming or self.book.halted
             return
@@ -187,8 +187,10 @@ class WindowState:
             return
         # sizing: half-Kelly of CURRENT bankroll, capped, split across
         # simultaneously armed assets this window
+        n_other = sum(1 for s in other_states
+                      if s is not self and s.ts == self.ts and s.armed)
         base = min(KELLY_F, STAKE_CAP_FRAC) * self.book.bank
-        stake = base / max(1, n_armed_same_window + 1) if n_armed_same_window else base
+        stake = base / (n_other + 1)
         stake = self.book.reserve(self.key, stake)
         if stake <= 0:
             self.done_arming = True
@@ -322,8 +324,6 @@ def main(minutes, start_bank):
                       f'pending={len(pending)} halted={book.halted}', flush=True)
             w_ts = now - (now % 300)
             if now <= deadline:
-                armed_now = sum(1 for s in states.values()
-                                if s.ts == w_ts and s.armed)
                 for a, cfg in ASSETS.items():
                     st = states.get(a)
                     if st is None or st.ts != w_ts:
@@ -333,7 +333,7 @@ def main(minutes, start_bank):
                             pending.append((a, cfg, st, 0))
                         states[a] = WindowState(a, cfg, w_ts, sm, book)
                         st = states[a]
-                    st.try_arm(armed_now)
+                    st.try_arm(list(states.values()))
                     st.tick()
             still = []
             for a, cfg, st, last_try in pending:
