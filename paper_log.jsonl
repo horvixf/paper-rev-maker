@@ -41,3 +41,5 @@
 {"type": "armed", "asset": "ETH", "ts": 1783623300, "side": "Up", "pmag": 0.0017463764283224858, "stake": 4.85, "bank": 99.85, "logged_at": 1783623317}
 {"type": "cancel", "asset": "BTC", "ts": 1783623300, "t": 19, "pR": 0.4774, "filled_frac": 0.0, "logged_at": 1783623319}
 {"type": "cancel", "asset": "ETH", "ts": 1783623300, "t": 19, "pR": 0.4871, "filled_frac": 0.0, "logged_at": 1783623319}
+{"type": "resolution", "asset": "BTC", "ts": 1783623300, "win": 0, "filled_frac": 0.0, "pnl": 0.0, "bank": 99.85, "logged_at": 1783623950}
+{"type": "resolution", "asset": "ETH", "ts": 1783623300, "win": 1, "filled_frac": 0.0, "pnl": 0.0, "bank": 99.85, "logged_at": 1783623950}
