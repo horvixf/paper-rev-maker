@@ -1,13 +1,13 @@
 {
- "updated_utc": "2026-07-09 18:40:21 UTC",
+ "updated_utc": "2026-07-09 18:55:17 UTC",
  "bankroll": 99.85,
  "start": 100.0,
  "roi_pct": -0.15,
  "max_drawdown_pct": 4.86,
  "halted": false,
- "armed_windows": 8,
+ "armed_windows": 10,
  "filled_windows": 2,
- "fill_rate_pct": 25.0,
+ "fill_rate_pct": 20.0,
  "closed_trades": 2,
  "wins": 1,
  "win_given_fill_pct": 50.0,
@@ -103,6 +103,24 @@
    "ts": 1783622400,
    "side": "Up",
    "pmag_pct": 0.18,
+   "stake": 4.85,
+   "filled_frac": 0.0,
+   "win": 1
+  },
+  {
+   "asset": "BTC",
+   "ts": 1783623300,
+   "side": "Up",
+   "pmag_pct": 0.149,
+   "stake": 4.85,
+   "filled_frac": 0.0,
+   "win": null
+  },
+  {
+   "asset": "ETH",
+   "ts": 1783623300,
+   "side": "Up",
+   "pmag_pct": 0.175,
    "stake": 4.85,
    "filled_frac": 0.0,
    "win": null
