@@ -46,3 +46,11 @@
 {"type": "armed", "asset": "BTC", "ts": 1783626300, "side": "Down", "pmag": 0.0014056614134077704, "stake": 4.85, "bank": 99.85, "logged_at": 1783626301}
 {"type": "cancel", "asset": "BTC", "ts": 1783626300, "t": 12, "pR": 0.4249, "filled_frac": 0.0, "logged_at": 1783626312}
 {"type": "repost", "asset": "BTC", "ts": 1783626300, "t": 25, "pR": 0.54, "logged_at": 1783626325}
+{"type": "armed", "asset": "BTC", "ts": 1783626600, "side": "Up", "pmag": 0.0014941665537324049, "stake": 4.85, "bank": 99.85, "logged_at": 1783626609}
+{"type": "armed", "asset": "ETH", "ts": 1783626600, "side": "Up", "pmag": 0.001467829389952595, "stake": 4.85, "bank": 99.85, "logged_at": 1783626610}
+{"type": "cancel", "asset": "BTC", "ts": 1783626600, "t": 33, "pR": 0.4944, "filled_frac": 0.0, "logged_at": 1783626634}
+{"type": "repost", "asset": "BTC", "ts": 1783626600, "t": 50, "pR": 0.5777, "logged_at": 1783626650}
+{"type": "fill", "asset": "BTC", "ts": 1783626600, "fill_t": 47, "print_price": 0.4, "print_notional": 495.0, "filled_frac": 1.0, "logged_at": 1783626652}
+{"type": "fill", "asset": "ETH", "ts": 1783626600, "fill_t": 50, "print_price": 0.39, "print_notional": 3.81, "filled_frac": 0.78, "logged_at": 1783626653}
+{"type": "fill", "asset": "ETH", "ts": 1783626600, "fill_t": 49, "print_price": 0.4, "print_notional": 3.96, "filled_frac": 1.0, "logged_at": 1783626653}
+{"type": "resolution", "asset": "BTC", "ts": 1783626300, "win": 1, "filled_frac": 0.0, "pnl": 0.0, "bank": 99.85, "logged_at": 1783626806}
