@@ -4,10 +4,15 @@ on:
     inputs:
       minutes:
         description: 'run length in minutes'
-        default: '180'
+        default: '330'
         required: false
+  schedule:
+    - cron: '15 */6 * * *'
 permissions:
   contents: write
+concurrency:
+  group: paper-session
+  cancel-in-progress: false
 jobs:
   paper:
     runs-on: ubuntu-latest
@@ -18,11 +23,11 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install requests
-      - name: run session with 10-min auto-commit of results
+      - name: run session with 10-min auto-commit (carryover from committed results.json)
         run: |
           git config user.name "paper-bot"
           git config user.email "actions@users.noreply.github.com"
-          python3 paper_bot.py "${{ github.event.inputs.minutes || '180' }}" &
+          python3 paper_bot.py "${{ github.event.inputs.minutes || '330' }}" &
           BOT=$!
           while kill -0 $BOT 2>/dev/null; do
             sleep 600
@@ -34,11 +39,11 @@ jobs:
           wait $BOT || true
           git pull --rebase --autostash || true
           git add -A paper_log.jsonl results.json 2>/dev/null || true
-          git commit -m "final session results" || true
+          git commit -m "session final" || true
           git push || true
-      - name: summary in job log
+      - name: summary
         if: always()
-        run: cat results.json || echo "no results file"
+        run: cat results.json || true
       - uses: actions/upload-artifact@v4
         if: always()
         with:
