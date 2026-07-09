@@ -48,11 +48,28 @@ def phi(z):
     return 0.5 * (1 + erf(z / math.sqrt(2)))
 
 class Book:
-    """virtual bankroll + trade ledger"""
+    """virtual bankroll + trade ledger (carries over from previous results.json)"""
     def __init__(self, start):
+        self.carried = {'armed': 0, 'filled': 0, 'closed': 0, 'wins': 0, 'origin': start}
+        if os.path.exists(SUM_PATH):
+            try:
+                prev = json.load(open(SUM_PATH))
+                pb = float(prev.get('bankroll', start))
+                if pb > 1:
+                    start = pb
+                self.carried = {
+                    'armed': int(prev.get('cum_armed', prev.get('armed_windows', 0)) or 0),
+                    'filled': int(prev.get('cum_filled', prev.get('filled_windows', 0)) or 0),
+                    'closed': int(prev.get('cum_closed', prev.get('closed_trades', 0)) or 0),
+                    'wins': int(prev.get('cum_wins', prev.get('wins', 0)) or 0),
+                    'origin': float(prev.get('origin', prev.get('start', start)) or start),
+                }
+                print(f'carryover: bankroll ${start:.2f}, cumulative fills {self.carried["filled"]}', flush=True)
+            except Exception:
+                pass
         self.start = start
         self.bank = start
-        self.peak = start
+        self.peak = max(start, self.carried.get('origin', start))
         self.max_dd = 0.0
         self.trades = []      # closed trades
         self.open_risk = {}   # (asset, ts) -> staked $
@@ -98,10 +115,16 @@ class Summary:
         closed = self.book.trades
         wins = sum(1 for t in closed if t['win'])
         b = self.book
+        c = b.carried
         out = {
             'updated_utc': time.strftime('%Y-%m-%d %H:%M:%S UTC', time.gmtime()),
-            'bankroll': b.bank, 'start': b.start,
-            'roi_pct': round(100 * (b.bank / b.start - 1), 2),
+            'bankroll': b.bank, 'start': b.start, 'origin': c['origin'],
+            'roi_session_pct': round(100 * (b.bank / b.start - 1), 2),
+            'roi_total_pct': round(100 * (b.bank / c['origin'] - 1), 2),
+            'cum_armed': c['armed'] + armed, 'cum_filled': c['filled'] + len(filled),
+            'cum_closed': c['closed'] + len(closed), 'cum_wins': c['wins'] + wins,
+            'cum_win_given_fill_pct': round(100 * (c['wins'] + wins) / max(c['closed'] + len(closed), 1), 1),
+            'gate_A_progress': f"{c['closed'] + len(closed)}/100 fills",
             'max_drawdown_pct': round(100 * b.max_dd, 2),
             'halted': b.halted,
             'armed_windows': armed,
