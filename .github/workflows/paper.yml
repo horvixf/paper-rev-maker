@@ -1,0 +1,49 @@
+name: paper-session
+on:
+  workflow_dispatch:
+    inputs:
+      minutes:
+        description: 'run length in minutes'
+        default: '180'
+        required: false
+permissions:
+  contents: write
+jobs:
+  paper:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - name: run session with 10-min auto-commit of results
+        run: |
+          git config user.name "paper-bot"
+          git config user.email "actions@users.noreply.github.com"
+          python3 paper_bot.py "${{ github.event.inputs.minutes || '180' }}" &
+          BOT=$!
+          while kill -0 $BOT 2>/dev/null; do
+            sleep 600
+            git pull --rebase --autostash || true
+            git add -A paper_log.jsonl results.json 2>/dev/null || true
+            git commit -m "auto: live results update" || true
+            git push || true
+          done
+          wait $BOT || true
+          git pull --rebase --autostash || true
+          git add -A paper_log.jsonl results.json 2>/dev/null || true
+          git commit -m "final session results" || true
+          git push || true
+      - name: summary in job log
+        if: always()
+        run: cat results.json || echo "no results file"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: paper-log-${{ github.run_id }}
+          path: |
+            paper_log.jsonl
+            results.json
+          if-no-files-found: ignore
