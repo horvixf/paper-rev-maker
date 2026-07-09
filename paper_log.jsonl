@@ -54,3 +54,5 @@
 {"type": "fill", "asset": "ETH", "ts": 1783626600, "fill_t": 50, "print_price": 0.39, "print_notional": 3.81, "filled_frac": 0.78, "logged_at": 1783626653}
 {"type": "fill", "asset": "ETH", "ts": 1783626600, "fill_t": 49, "print_price": 0.4, "print_notional": 3.96, "filled_frac": 1.0, "logged_at": 1783626653}
 {"type": "resolution", "asset": "BTC", "ts": 1783626300, "win": 1, "filled_frac": 0.0, "pnl": 0.0, "bank": 99.85, "logged_at": 1783626806}
+{"type": "resolution", "asset": "BTC", "ts": 1783626600, "win": 1, "filled_frac": 1.0, "pnl": 4.95, "bank": 104.8, "logged_at": 1783627101}
+{"type": "resolution", "asset": "ETH", "ts": 1783626600, "win": 0, "filled_frac": 1.0, "pnl": -4.85, "bank": 99.95, "logged_at": 1783627181}
