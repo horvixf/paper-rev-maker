@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-07-09 22:20:09 UTC",
+ "updated_utc": "2026-07-09 22:31:01 UTC",
  "bankroll": 99.95,
  "start": 99.95,
  "origin": 100.0,
@@ -29,7 +29,7 @@
    "pmag_pct": 0.17,
    "stake": 4.86,
    "filled_frac": 0.0,
-   "win": null
+   "win": 0
   }
  ]
 }
