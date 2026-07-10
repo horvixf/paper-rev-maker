@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-07-10 12:26:26 UTC",
+ "updated_utc": "2026-07-10 12:27:42 UTC",
  "bankroll": 96.54,
  "start": 101.47,
  "origin": 100.0,
@@ -85,7 +85,7 @@
    "pmag_pct": 0.131,
    "stake": 4.69,
    "filled_frac": 0.0,
-   "win": null
+   "win": 1
   },
   {
    "asset": "ETH",
@@ -94,7 +94,7 @@
    "pmag_pct": 0.174,
    "stake": 2.35,
    "filled_frac": 0.0,
-   "win": null
+   "win": 0
   }
  ]
 }
