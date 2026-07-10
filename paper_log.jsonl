@@ -265,3 +265,4 @@
 {"type": "cancel", "asset": "BTC", "ts": 1783679100, "t": 31, "pR": 0.4577, "filled_frac": 1.0, "logged_at": 1783679131}
 {"type": "repost", "asset": "ETH", "ts": 1783679100, "t": 50, "pR": 0.5376, "logged_at": 1783679150}
 {"type": "resolution", "asset": "BTC", "ts": 1783679100, "win": 0, "filled_frac": 1.0, "pnl": -4.93, "bank": 96.54, "logged_at": 1783679721}
+{"type": "resolution", "asset": "ETH", "ts": 1783679100, "win": 0, "filled_frac": 0.0, "pnl": 0.0, "bank": 96.54, "logged_at": 1783679801}
