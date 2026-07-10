@@ -88,3 +88,5 @@
 {"type": "fill", "asset": "ETH", "ts": 1783641600, "fill_t": 20, "print_price": 0.48, "print_notional": 2.48, "filled_frac": 1.0, "logged_at": 1783641628}
 {"type": "cancel", "asset": "ETH", "ts": 1783641600, "t": 51, "pR": 0.485, "filled_frac": 1.0, "logged_at": 1783641651}
 {"type": "cancel", "asset": "BTC", "ts": 1783641600, "t": 70, "pR": 0.4453, "filled_frac": 0.0, "logged_at": 1783641670}
+{"type": "resolution", "asset": "ETH", "ts": 1783641600, "win": 0, "filled_frac": 1.0, "pnl": -2.43, "bank": 97.52, "logged_at": 1783642062}
+{"type": "resolution", "asset": "BTC", "ts": 1783641600, "win": 0, "filled_frac": 0.0, "pnl": 0.0, "bank": 97.52, "logged_at": 1783642230}
