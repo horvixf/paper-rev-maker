@@ -272,3 +272,9 @@
 {"type": "resolution", "asset": "ETH", "ts": 1783684200, "win": 1, "filled_frac": 0.0, "pnl": 0.0, "bank": 96.54, "logged_at": 1783684621}
 {"type": "armed", "asset": "BTC", "ts": 1783685700, "side": "Down", "pmag": 0.0022258648372793437, "stake": 4.69, "bank": 96.54, "logged_at": 1783685709}
 {"type": "armed", "asset": "ETH", "ts": 1783685700, "side": "Down", "pmag": 0.002263272725143945, "stake": 2.35, "bank": 96.54, "logged_at": 1783685709}
+{"type": "armed", "asset": "BTC", "ts": 1783686000, "side": "Up", "pmag": 0.001310101065151841, "stake": 4.69, "bank": 96.54, "logged_at": 1783686001}
+{"type": "armed", "asset": "ETH", "ts": 1783686000, "side": "Up", "pmag": 0.001741407097343491, "stake": 2.35, "bank": 96.54, "logged_at": 1783686002}
+{"type": "cancel", "asset": "BTC", "ts": 1783686000, "t": 4, "pR": 0.4933, "filled_frac": 0.0, "logged_at": 1783686004}
+{"type": "cancel", "asset": "ETH", "ts": 1783686000, "t": 9, "pR": 0.4906, "filled_frac": 0.0, "logged_at": 1783686009}
+{"type": "resolution", "asset": "BTC", "ts": 1783685700, "win": 1, "filled_frac": 0.0, "pnl": 0.0, "bank": 96.54, "logged_at": 1783686265}
+{"type": "resolution", "asset": "ETH", "ts": 1783685700, "win": 1, "filled_frac": 0.0, "pnl": 0.0, "bank": 96.54, "logged_at": 1783686386}
