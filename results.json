@@ -1,21 +1,21 @@
 {
- "updated_utc": "2026-07-10 13:25:01 UTC",
+ "updated_utc": "2026-07-10 13:35:45 UTC",
  "bankroll": 96.54,
  "start": 101.47,
  "origin": 100.0,
  "roi_session_pct": -4.86,
  "roi_total_pct": -3.46,
- "cum_armed": 70,
- "cum_filled": 20,
+ "cum_armed": 72,
+ "cum_filled": 21,
  "cum_closed": 20,
  "cum_wins": 10,
  "cum_win_given_fill_pct": 50.0,
  "gate_A_progress": "20/100 fills",
  "max_drawdown_pct": 4.86,
  "halted": false,
- "armed_windows": 10,
- "filled_windows": 1,
- "fill_rate_pct": 10.0,
+ "armed_windows": 12,
+ "filled_windows": 2,
+ "fill_rate_pct": 16.7,
  "closed_trades": 1,
  "wins": 0,
  "win_given_fill_pct": 0.0,
@@ -112,7 +112,7 @@
    "pmag_pct": 0.117,
    "stake": 4.69,
    "filled_frac": 0.0,
-   "win": null
+   "win": 1
   },
   {
    "asset": "ETH",
@@ -121,6 +121,24 @@
    "pmag_pct": 0.178,
    "stake": 2.35,
    "filled_frac": 0.0,
+   "win": 1
+  },
+  {
+   "asset": "BTC",
+   "ts": 1783690200,
+   "side": "Up",
+   "pmag_pct": 0.178,
+   "stake": 4.69,
+   "filled_frac": 0.0,
+   "win": null
+  },
+  {
+   "asset": "ETH",
+   "ts": 1783690200,
+   "side": "Up",
+   "pmag_pct": 0.174,
+   "stake": 2.35,
+   "filled_frac": 1.0,
    "win": null
   }
  ]
