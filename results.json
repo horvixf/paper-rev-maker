@@ -1,24 +1,24 @@
 {
- "updated_utc": "2026-07-10 02:29:27 UTC",
- "bankroll": 123.88,
+ "updated_utc": "2026-07-10 02:40:09 UTC",
+ "bankroll": 120.93,
  "start": 99.95,
  "origin": 100.0,
- "roi_session_pct": 23.94,
- "roi_total_pct": 23.88,
- "cum_armed": 41,
+ "roi_session_pct": 20.99,
+ "roi_total_pct": 20.93,
+ "cum_armed": 42,
  "cum_filled": 13,
- "cum_closed": 11,
- "cum_wins": 8,
- "cum_win_given_fill_pct": 72.7,
- "gate_A_progress": "11/100 fills",
- "max_drawdown_pct": 2.48,
+ "cum_closed": 13,
+ "cum_wins": 9,
+ "cum_win_given_fill_pct": 69.2,
+ "gate_A_progress": "13/100 fills",
+ "max_drawdown_pct": 4.86,
  "halted": false,
- "armed_windows": 28,
+ "armed_windows": 29,
  "filled_windows": 9,
- "fill_rate_pct": 32.1,
- "closed_trades": 7,
- "wins": 6,
- "win_given_fill_pct": 85.7,
+ "fill_rate_pct": 31.0,
+ "closed_trades": 9,
+ "wins": 7,
+ "win_given_fill_pct": 77.8,
  "benchmark": "proxy 61.2% win-given-fill; gate >= 53%; planning 55%",
  "trades": [
   {
@@ -90,6 +90,26 @@
    "win": true,
    "pnl": 5.86,
    "bank_after": 123.88
+  },
+  {
+   "asset": "BTC",
+   "ts": 1783650300,
+   "side": "Up",
+   "stake": 6.02,
+   "filled_frac": 1.0,
+   "win": false,
+   "pnl": -6.02,
+   "bank_after": 117.86
+  },
+  {
+   "asset": "ETH",
+   "ts": 1783650300,
+   "side": "Up",
+   "stake": 3.01,
+   "filled_frac": 1.0,
+   "win": true,
+   "pnl": 3.07,
+   "bank_after": 120.93
   }
  ],
  "windows": [
@@ -334,7 +354,7 @@
    "pmag_pct": 0.178,
    "stake": 6.02,
    "filled_frac": 1.0,
-   "win": null
+   "win": 0
   },
   {
    "asset": "ETH",
@@ -343,6 +363,15 @@
    "pmag_pct": 0.231,
    "stake": 3.01,
    "filled_frac": 1.0,
+   "win": 1
+  },
+  {
+   "asset": "ETH",
+   "ts": 1783651200,
+   "side": "Down",
+   "pmag_pct": 0.146,
+   "stake": 5.88,
+   "filled_frac": 0.0,
    "win": null
   }
  ]
