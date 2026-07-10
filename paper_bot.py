@@ -210,10 +210,18 @@ class WindowState:
             return
         # sizing: half-Kelly of CURRENT bankroll, capped, split across
         # simultaneously armed assets this window
-        n_other = sum(1 for s in other_states
-                      if s is not self and s.ts == self.ts and s.armed)
+        others = [s for s in other_states
+                  if s is not self and s.ts == self.ts and s.armed and not s.closed]
         base = min(KELLY_F, STAKE_CAP_FRAC) * self.book.bank
-        stake = base / (n_other + 1)
+        stake = base / (len(others) + 1)
+        for s in others:
+            # rebalance earlier leg down to the split share (only unfilled portion shrinks)
+            new_stake = round(s.stake / (len(others) + 1) * len(others) + 0.0, 2)
+            new_stake = round(base / (len(others) + 1), 2)
+            if s.fill_notional < new_stake:
+                self.book.open_risk[s.key] = new_stake
+                s.stake = new_stake
+                self.sm.upsert(s.key, stake=new_stake)
         stake = self.book.reserve(self.key, stake)
         if stake <= 0:
             self.done_arming = True
