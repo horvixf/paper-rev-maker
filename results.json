@@ -1,396 +1,44 @@
 {
- "updated_utc": "2026-07-10 03:23:50 UTC",
+ "updated_utc": "2026-07-10 04:25:02 UTC",
  "bankroll": 120.93,
- "start": 99.95,
+ "start": 120.93,
  "origin": 100.0,
- "roi_session_pct": 20.99,
+ "roi_session_pct": 0.0,
  "roi_total_pct": 20.93,
- "cum_armed": 44,
+ "cum_armed": 46,
  "cum_filled": 13,
  "cum_closed": 13,
  "cum_wins": 9,
  "cum_win_given_fill_pct": 69.2,
  "gate_A_progress": "13/100 fills",
- "max_drawdown_pct": 4.86,
+ "max_drawdown_pct": 0.0,
  "halted": false,
- "armed_windows": 31,
- "filled_windows": 9,
- "fill_rate_pct": 29.0,
- "closed_trades": 9,
- "wins": 7,
- "win_given_fill_pct": 77.8,
+ "armed_windows": 2,
+ "filled_windows": 0,
+ "fill_rate_pct": 0.0,
+ "closed_trades": 0,
+ "wins": 0,
+ "win_given_fill_pct": null,
  "benchmark": "proxy 61.2% win-given-fill; gate >= 53%; planning 55%",
- "trades": [
-  {
-   "asset": "ETH",
-   "ts": 1783641600,
-   "side": "Up",
-   "stake": 2.43,
-   "filled_frac": 1.0,
-   "win": false,
-   "pnl": -2.43,
-   "bank_after": 97.52
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783643100,
-   "side": "Up",
-   "stake": 4.74,
-   "filled_frac": 1.0,
-   "win": true,
-   "pnl": 4.84,
-   "bank_after": 102.36
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783643100,
-   "side": "Up",
-   "stake": 2.37,
-   "filled_frac": 1.0,
-   "win": true,
-   "pnl": 2.42,
-   "bank_after": 104.78
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783643700,
-   "side": "Up",
-   "stake": 4.97,
-   "filled_frac": 1.0,
-   "win": true,
-   "pnl": 5.07,
-   "bank_after": 109.85
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783645200,
-   "side": "Down",
-   "stake": 5.34,
-   "filled_frac": 1.0,
-   "win": true,
-   "pnl": 5.45,
-   "bank_after": 115.3
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783645200,
-   "side": "Down",
-   "stake": 2.67,
-   "filled_frac": 1.0,
-   "win": true,
-   "pnl": 2.72,
-   "bank_after": 118.02
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783648800,
-   "side": "Up",
-   "stake": 5.74,
-   "filled_frac": 1.0,
-   "win": true,
-   "pnl": 5.86,
-   "bank_after": 123.88
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783650300,
-   "side": "Up",
-   "stake": 6.02,
-   "filled_frac": 1.0,
-   "win": false,
-   "pnl": -6.02,
-   "bank_after": 117.86
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783650300,
-   "side": "Up",
-   "stake": 3.01,
-   "filled_frac": 1.0,
-   "win": true,
-   "pnl": 3.07,
-   "bank_after": 120.93
-  }
- ],
+ "trades": [],
  "windows": [
   {
    "asset": "BTC",
-   "ts": 1783635600,
-   "side": "Down",
-   "pmag_pct": 0.17,
-   "stake": 4.86,
-   "filled_frac": 0.0,
-   "win": 0
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783637700,
+   "ts": 1783657500,
    "side": "Up",
-   "pmag_pct": 0.122,
-   "stake": 4.86,
+   "pmag_pct": 0.191,
+   "stake": 5.88,
    "filled_frac": 0.0,
-   "win": 0
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783639200,
-   "side": "Up",
-   "pmag_pct": 0.139,
-   "stake": 4.86,
-   "filled_frac": 0.0,
-   "win": 1
+   "win": null
   },
   {
    "asset": "ETH",
-   "ts": 1783639200,
+   "ts": 1783657500,
    "side": "Up",
    "pmag_pct": 0.185,
-   "stake": 2.43,
-   "filled_frac": 0.0,
-   "win": 1
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783639500,
-   "side": "Down",
-   "pmag_pct": 0.277,
-   "stake": 4.86,
-   "filled_frac": 0.0,
-   "win": 1
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783639500,
-   "side": "Down",
-   "pmag_pct": 0.305,
-   "stake": 2.43,
-   "filled_frac": 0.0,
-   "win": 1
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783641600,
-   "side": "Up",
-   "pmag_pct": 0.137,
-   "stake": 4.86,
-   "filled_frac": 0.0,
-   "win": 0
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783641600,
-   "side": "Up",
-   "pmag_pct": 0.148,
-   "stake": 2.43,
-   "filled_frac": 1.0,
-   "win": 0
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783643100,
-   "side": "Up",
-   "pmag_pct": 0.184,
-   "stake": 4.74,
-   "filled_frac": 1.0,
-   "win": 1
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783643100,
-   "side": "Up",
-   "pmag_pct": 0.238,
-   "stake": 2.37,
-   "filled_frac": 1.0,
-   "win": 1
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783643700,
-   "side": "Up",
-   "pmag_pct": 0.215,
-   "stake": 4.97,
-   "filled_frac": 1.0,
-   "win": 1
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783643700,
-   "side": "Up",
-   "pmag_pct": 0.204,
-   "stake": 2.49,
-   "filled_frac": 0.0,
-   "win": 1
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783644000,
-   "side": "Down",
-   "pmag_pct": 0.209,
-   "stake": 5.09,
-   "filled_frac": 0.0,
-   "win": 1
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783644000,
-   "side": "Down",
-   "pmag_pct": 0.165,
-   "stake": 2.55,
-   "filled_frac": 0.0,
-   "win": 1
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783645200,
-   "side": "Down",
-   "pmag_pct": 0.12,
-   "stake": 5.34,
-   "filled_frac": 1.0,
-   "win": 1
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783645200,
-   "side": "Down",
-   "pmag_pct": 0.219,
-   "stake": 2.67,
-   "filled_frac": 1.0,
-   "win": 1
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783645500,
-   "side": "Up",
-   "pmag_pct": 0.23,
-   "stake": 5.34,
-   "filled_frac": 0.0,
-   "win": 1
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783645500,
-   "side": "Up",
-   "pmag_pct": 0.27,
-   "stake": 2.67,
-   "filled_frac": 0.0,
-   "win": 1
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783646100,
-   "side": "Down",
-   "pmag_pct": 0.176,
-   "stake": 5.74,
-   "filled_frac": 0.0,
-   "win": 0
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783646400,
-   "side": "Down",
-   "pmag_pct": 0.221,
-   "stake": 5.74,
-   "filled_frac": 0.0,
-   "win": 0
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783646400,
-   "side": "Down",
-   "pmag_pct": 0.337,
-   "stake": 2.87,
-   "filled_frac": 0.0,
-   "win": 1
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783648200,
-   "side": "Down",
-   "pmag_pct": 0.575,
-   "stake": 5.74,
-   "filled_frac": 0.0,
-   "win": 0
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783648200,
-   "side": "Down",
-   "pmag_pct": 1.156,
-   "stake": 2.87,
-   "filled_frac": 0.0,
-   "win": 0
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783648800,
-   "side": "Up",
-   "pmag_pct": 0.192,
-   "stake": 5.74,
-   "filled_frac": 1.0,
-   "win": 1
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783649700,
-   "side": "Down",
-   "pmag_pct": 0.149,
-   "stake": 6.02,
-   "filled_frac": 0.0,
-   "win": 0
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783650000,
-   "side": "Down",
-   "pmag_pct": 0.13,
-   "stake": 6.02,
-   "filled_frac": 0.0,
-   "win": 1
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783650300,
-   "side": "Up",
-   "pmag_pct": 0.178,
-   "stake": 6.02,
-   "filled_frac": 1.0,
-   "win": 0
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783650300,
-   "side": "Up",
-   "pmag_pct": 0.231,
-   "stake": 3.01,
-   "filled_frac": 1.0,
-   "win": 1
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783651200,
-   "side": "Down",
-   "pmag_pct": 0.146,
-   "stake": 5.88,
-   "filled_frac": 0.0,
-   "win": 1
-  },
-  {
-   "asset": "BTC",
-   "ts": 1783651800,
-   "side": "Down",
-   "pmag_pct": 0.157,
-   "stake": 5.88,
-   "filled_frac": 0.0,
-   "win": 0
-  },
-  {
-   "asset": "ETH",
-   "ts": 1783651800,
-   "side": "Down",
-   "pmag_pct": 0.165,
    "stake": 2.94,
    "filled_frac": 0.0,
-   "win": 0
+   "win": null
   }
  ]
 }
